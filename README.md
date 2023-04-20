@@ -14,3 +14,10 @@ Required Python Packages:
 1. re
 
 
+Data Structure:
+  Trees (with binary options such as vegetarian or not, vegan or not, gluten free or not, etc.) once ingredients have been input.
+ (refer to word document for more information on the data structure)
+
+
+  
+  
