@@ -17,6 +17,8 @@ Required Python Packages:
 Data Structure:
   Trees (with binary options such as vegetarian or not, vegan or not, gluten free or not, etc.) once ingredients have been input.
  (refer to word document for more information on the data structure)
+ 
+Note: Foodista website seems to be down or outdated. If possible, in the results, click on links other than foodista to be taken to an active website.
 
 
   
