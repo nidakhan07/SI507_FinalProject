@@ -1,4 +1,4 @@
-
+#
 # Name: Nida Khan
 # uniqname: nidamk
 
@@ -94,7 +94,7 @@ def call_api(ingredients):
     ingredient list
     
     '''
-    params = {'ingredients' : ingredients, 'number': 50, 'ignorePantry': True, 'cheap': True}
+    params = {'ingredients' : ingredients, 'number': 50, 'ignorePantry': True, 'cheap': None}
     ingred_output = requests.get(url1 + f'?apiKey={api_key}', params=params).json()
     id = [i['id'] for i in ingred_output]
     attribute_list = ['title', 'pricePerServing', 'glutenFree', 'vegetarian', 'vegan', 'dishTypes', 'readyInMinutes', 'sourceUrl']
@@ -201,14 +201,14 @@ def main():
     dish_type = input('Do you want something sweet or savory ').strip()
 
     if dish_type == "sweet":
-        sweet_results = results_df[results_df['dishTypes'].str.contains('desserts', regex=False)]
-        gluten = input('Does the dish need to be Gluten Free?')
+        sweet_results = results_df[~results_df['dishTypes'].str.contains('dinner', 'lunch', regex=False)]
+        gluten = input('Does the dish need to be Gluten Free? ')
         if gluten == "Yes" or gluten == "yes":
             sweet_results = sweet_results[sweet_results['glutenFree']==True]
         final_results = sweet_results
 
     elif dish_type == 'savory':
-        savory_results = results_df[~results_df['dishTypes'].str.contains('desserts', regex=False)]
+        savory_results = results_df[results_df['dishTypes'].str.contains('dinner', 'lunch', 'main course', regex=False)]
         vegetarian = input('Does the dish need to be Vegetarian? ')
         if vegetarian == "Yes" or vegetarian == "yes":
             savory_results = savory_results[savory_results['vegetarian']==True]
@@ -258,6 +258,11 @@ def main():
 
 if __name__ == "__main__":
     main()
+
+
+
+
+
 
 
 
