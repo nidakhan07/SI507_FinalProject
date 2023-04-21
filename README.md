@@ -18,6 +18,15 @@ Data Structure:
   Trees (with binary options such as vegetarian or not, vegan or not, gluten free or not, etc.) once ingredients have been input.
  (refer to word document for more information on the data structure)
  
+ 
+
+Possible ingredient options to try:
+
+1. pasta, green onion, carrot, chicken, parsley
+1. beans, chicken, onion, corn, mushroom
+1. rice, soy sauce, ginger, peas, kimchi
+1. Apple, cinnamon, nutmeg, sugar, flour 
+ 
 Note: Foodista website seems to be down or outdated. If possible, in the results, click on links other than foodista to be taken to an active website.
 
 
